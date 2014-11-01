@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event</title>
+    <link href="/static/event/css/style.css" rel='stylesheet' type='text/css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/event/images/fav-icon.png"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <!-- Global CSS for the page and tiles -->
+    <link rel="stylesheet" href="/static/event/css/main.css">
+    <!-- //Global CSS for the page and tiles -->
+    <!---start-click-drop-down-menu----->
+    <script src="/static/event/js/jquery.min.js"></script>
+    <!----start-dropdown--->
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        $(function () {
+            $('#activator').click(function () {
+                $('#box').animate({'top': '0px'}, 500);
+            });
+            $('#boxclose').click(function () {
+                $('#box').animate({'top': '-700px'}, 500);
+            });
+        });
+        $(document).ready(function () {
+            //Hide (Collapse) the toggle containers on load
+            $(".toggle_container").hide();
+            //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+            $(".trigger").click(function () {
+                $(this).toggleClass("active").next().slideToggle("slow");
+                return false; //Prevent the browser jump to the link anchor
+            });
+
+        });
+    </script>
+    <!----//End-dropdown--->
+    <!---//End-click-drop-down-menu----->
+</head>
+
+<body>
+{% include "event/general_includes/header.html" %}
+<div class="content">
+    <div class="wrap">
+        <div id="main" role="main">
+
+                <h1>Your registration has been submitted</h1>
+
+                <p class="lead">You should check you mail box and confirm your registration</p>
+                <a href="/event/login">Return to login page</a>
+
+        </div>
+        <!-- /.container -->
+    </div>
+</div>
+{% include "event/general_includes/footer.html" %}
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
