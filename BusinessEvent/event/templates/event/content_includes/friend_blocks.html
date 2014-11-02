@@ -1,0 +1,15 @@
+{% for friend in friends %}
+    <li>
+        <img src="/image/user/{{ friend.user.id }}" width="200" onclick="location.href='/user/{{ friend.user.id }}';">
+
+        <div class="post-info">
+            <div class="post-basic-info">
+                <h3><a href="/user/{{ friend.user.id }}">{{ friend.user.get_full_name }}</a></h3>
+                <span class="mail"><a href="mailto:{{ friend.user.email }}"><label> </label>{{ friend.user.email }}</a></span>
+
+                <p>{{ friend.description }}</p>
+
+            </div>
+        </div>
+    </li>
+{% endfor %}

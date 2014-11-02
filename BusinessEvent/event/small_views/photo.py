@@ -19,3 +19,13 @@ def user_photo(request, user_id):
         content_type = guess_type('user-pic.png')
         return HttpResponse(open(default_image).read(), content_type=content_type)
     return HttpResponse(user_more.pic.read(), content_type=content_type)
+
+def news_photo(request, news_id):
+    news = get_object_or_404(News, id=news_id)
+    content_type = guess_type(news.pic.name)
+    return HttpResponse(news.pic.read(), content_type=content_type)
+
+def event_photo(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    content_type = guess_type(event.pic.name)
+    return HttpResponse(event.pic.read(), content_type=content_type)

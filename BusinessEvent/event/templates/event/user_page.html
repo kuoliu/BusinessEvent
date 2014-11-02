@@ -1,0 +1,39 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{ cur_user.user.get_full_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include "event/general_includes/include_css.html" %}
+    {% include "event/general_includes/include_js.html" %}
+</head>
+<body>
+<!---start-wrap---->
+{% include "event/general_includes/header.html" %}
+<!---start-content---->
+<div class="content">
+    <div class="wrap">
+        <div class="single-page">
+            <div class="single-page-artical">
+                <div class="artical-content">
+                    <img src="/image/user/{{ cur_user.user.id }}" title="{{ cur_user.user.get_full_name }}">
+
+                    <h3><a href="#">{{ cur_user.user.get_full_name }}</a></h3>
+
+                    <p>{{ cur_user.description }}</p>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "event/general_includes/footer.html" %}
+<!---//End-wrap---->
+</body>
+</html>

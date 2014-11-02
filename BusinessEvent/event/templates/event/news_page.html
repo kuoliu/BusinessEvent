@@ -1,0 +1,49 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{ news.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include "event/general_includes/include_css.html" %}
+    {% include "event/general_includes/include_js.html" %}
+</head>
+<body>
+<!---start-wrap---->
+{% include "event/general_includes/header.html" %}
+<!---start-content---->
+<div class="content">
+    <div class="wrap">
+        <div class="single-page">
+            <div class="single-page-artical">
+                <div class="artical-content">
+                    <img src="/image/news/{{ news.id }}" title="{{ news.abstract }}">
+
+                    <h3><a href="#">{{ news.title }}</a></h3>
+
+                    <p>{{ news.content }}</p>
+
+                </div>
+                <div class="artical-links">
+                    <ul>
+                        <li><a href="#"><img src="/static/event/images/blog-icon2.png"
+                                             title="Author"><span>{{ news.media.first_name }}</span></a></li>
+                        <li><a href="#"><img src="/static/event/images/blog-icon4.png"
+                                             title="Tag"><span>{{ news.tag }}</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "event/general_includes/footer.html" %}
+<!---//End-wrap---->
+</body>
+</html>
+

@@ -2,11 +2,12 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
-# Create your models here.
+# role[1:star, 2:media, 3:enterprise, 4:event holder]
 class User_More(models.Model):
     user = models.ForeignKey(User)
     description = models.TextField()
     pic = models.ImageField(upload_to="user_images", blank=True)
+    role = models.IntegerField()
 
     def __unicode__(self):
         return unicode(self.user)
@@ -17,6 +18,7 @@ class User_Random(models.Model):
 
 class Event(models.Model):
     name = models.TextField()
+    tag = models.CharField(max_length=64)
     description = models.TextField()
     pic = models.ImageField(upload_to="event_images", blank=True)
 
@@ -24,7 +26,7 @@ class Event(models.Model):
         return self.name
 
 class News(models.Model):
-    event = models.ForeignKey(Event)
+    event = models.ForeignKey(Event,null=True)
     media = models.ForeignKey(User)
     tag = models.CharField(max_length=32)
     title = models.CharField(max_length=64)
@@ -35,3 +37,11 @@ class News(models.Model):
 
     def __unicode(self):
         return self.abstract
+
+class UserMore_Event(models.Model):
+    user_more = models.ForeignKey(User_More)
+    event = models.ForeignKey(Event)
+
+class UserMore_News(models.Model):
+    user_more = models.ForeignKey(User_More)
+    news = models.ForeignKey(News)

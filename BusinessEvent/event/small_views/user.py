@@ -29,11 +29,13 @@ def login(request):
         return render(request, 'event/login.html', context)
     else:
         django.contrib.auth.login(request, new_user)
+    user_more = User_More.objects.get(user=new_user)
     return redirect('/event')
 
 @transaction.atomic
 def register(request):
-    context = {'login_user': request.user}
+    user_more = User_More.objects.get(user = request.user)
+    context = {'login_user': user_more}
     if request.method == 'GET':
         return render(request, 'event/register.html', context)
     if len(User.objects.filter(username=request.POST['email'])) > 0:
@@ -68,9 +70,30 @@ def register(request):
     new_user.save()
     new_user_random = User_Random(user=new_user, random=random_str)
     new_user_random.save()
-    new_user_more = User_More(user=new_user, description=request.POST['description'], pic=request.FILES['picture'])
+    new_user_more = User_More(user=new_user, description=request.POST['description'], pic=request.FILES['picture'], role=1)
     new_user_more.save()
     return redirect('/event/confirmation')
+
+@login_required
+@transaction.atomic
+def modify_info(request):
+    user_more = User_More.objects.get(user = request.user)
+    context = {'login_user': user_more}
+    if request.method == 'GET':
+        return render(request, 'event/personal_info.html', context)
+    if request.POST['password1'] != request.POST['password2']:
+        context['error'] = "Passwords don't match"
+        return render(request, 'event/register.html', context)
+    user_more.user.first_name = request.POST['firstname']
+    user_more.user.last_name = request.POST['lastname']
+    user_more.user.password = request.POST['password1']
+    user_more.user.email = request.POST['email']
+    user_more.user.username = request.POST['email']
+    user_more.pic = request.FILES['picture']
+    user_more.description = request.POST['description']
+    user_more.user.save()
+    user_more.save()
+    return redirect('/event/modify_info/')
 
 @transaction.atomic
 def activate(request, user_email, random_id):
@@ -89,6 +112,9 @@ def gen_activate_key(length):
     return ''.join([random.choice(chars) for i in range(length)])
 
 def confirmation(request):
-    return render(request, 'event/confirmation.html')
+    if request.user:
+        user_more = User_More.objects.get(user = request.user)
+    context = {'login_user': user_more}
+    return render(request, 'event/small_pages/confirmation.html', context)
 
 

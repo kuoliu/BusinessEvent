@@ -1,0 +1,15 @@
+{% for event in events %}
+    <li onclick="location.href='/event/event/{{ event.id }}';">
+        <img src="/image/event/{{ event.id }}" width="200">
+
+        <div class="post-info">
+            <div class="post-basic-info">
+                <h3><a href="#">{{ event.name }}</a></h3>
+                <span><a href="#"><label> </label>{{ event.tag }}</a></span>
+
+                <p>{{ event.description }}</p>
+
+            </div>
+        </div>
+    </li>
+{% endfor %}

@@ -1,0 +1,75 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{ event.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include "event/general_includes/include_css.html" %}
+    {% include "event/general_includes/include_js.html" %}
+</head>
+<body>
+<!---start-wrap---->
+{% include "event/general_includes/header.html" %}
+<!---start-content---->
+<div class="content">
+<div class="wrap">
+<div id="main" role="main">
+<ul id="tiles">
+<!-- These are our grid blocks -->
+{% include "event/content_includes/guest_blocks.html" %}
+<!-- End of grid blocks -->
+</ul>
+</div>
+</div>
+</div>
+<!---//End-content---->
+<!----wookmark-scripts---->
+<script src="/static/event/js/jquery.imagesloaded.js"></script>
+<script src="/static/event/js/jquery.wookmark.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        var $tiles = $('#tiles'),
+                $handler = $('li', $tiles),
+                $main = $('#main'),
+                $window = $(window),
+                $document = $(document),
+                options = {
+                    autoResize: true, // This will auto-update the layout when the browser window is resized.
+                    container: $main, // Optional, used for some extra CSS styling
+                    offset: 20, // Optional, the distance between grid items
+                    itemWidth: 280 // Optional, the width of a grid item
+                };
+
+        /**
+         * Reinitializes the wookmark handler after all images have loaded
+         */
+        function applyLayout() {
+            $tiles.imagesLoaded(function () {
+                // Destroy the old handler
+                if ($handler.wookmarkInstance) {
+                    $handler.wookmarkInstance.clear();
+                }
+
+                // Create a new layout handler.
+                $handler = $('li', $tiles);
+                $handler.wookmark(options);
+            });
+        }
+
+        // Call the layout function for the first time
+        applyLayout();
+
+        // Capture scroll event.
+        $window.bind('scroll.wookmark', onScroll);
+    })(jQuery);
+</script>
+<!----//wookmark-scripts---->
+{% include "event/general_includes/footer.html" %}
+<!---//End-wrap---->
+</body>
+</html>

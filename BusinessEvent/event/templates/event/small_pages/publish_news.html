@@ -1,0 +1,66 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Publish News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include "event/general_includes/include_css.html" %}
+    {% include "event/general_includes/include_js.html" %}
+</head>
+<body>
+<!---start-wrap---->
+{% include "event/general_includes/header.html" %}
+<!---start-content---->
+<div class="content">
+    <div class="wrap">
+        <div class="contact-info">
+            <div class="contact-grids">
+                <h1>Publish News</h1>
+
+                <div class="clear"></div>
+            </div>
+            <form method="post" enctype="multipart/form-data" action="/publish/publish_news">
+                {% if error %}
+                    <div class="notification-box notification-box-error">
+                        <p><i class="icon-remove-sign"></i>{{ error }}</p>
+                        <a href="#" class="notification-close notification-close-error"><i
+                                class="icon-remove"></i></a>
+                    </div>
+                {% endif %}
+                <div class="contact-form">
+                    <div class="contact-to">
+                        <input type="text" class="text" name="title" placeholder="Title">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="contact-to">
+                        <input type="text" class="text" name="tag" placeholder="Tag">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="contact-to">
+                        <input type="text" class="text" name="abstract" placeholder="Abstract">
+                    </div>
+                    <div class="clear"></div>
+                    <span class="btn btn-file"><input type="file" name="picture"></span>
+
+                    <div class="clear"></div>
+                    <div class="text2">
+                        <textarea name="content" placeholder="Content of the news"></textarea>
+                    </div>
+                    <span><input type="submit" class="" value="Submit"></span>
+
+                    <div class="clear"></div>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+</div>
+{% include "event/general_includes/footer.html" %}
+<!---//End-wrap---->
+</body>
+</html>

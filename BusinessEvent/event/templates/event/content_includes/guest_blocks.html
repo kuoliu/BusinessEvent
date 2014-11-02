@@ -1,0 +1,15 @@
+{% for guest in guests %}
+    <li>
+        <img src="/image/user/{{ guest.user.id }}" width="200" onclick="location.href='/user/{{ guest.user.id }}';">
+
+        <div class="post-info">
+            <div class="post-basic-info">
+                <h3><a href="/user/{{ guest.user.id }}">{{ guest.user.get_full_name }}</a></h3>
+                <span class="mail"><a href="mailto:{{ guest.user.email }}"><label> </label>{{ guest.user.email }}</a></span>
+
+                <p>{{ friend.description }}</p>
+
+            </div>
+        </div>
+    </li>
+{% endfor %}
