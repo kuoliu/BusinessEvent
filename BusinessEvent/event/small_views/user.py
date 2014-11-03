@@ -10,6 +10,7 @@ from django.core.mail import send_mail
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 import django
+from event.small_views.utils import public_ip
 
 @transaction.atomic
 def login(request):
@@ -34,8 +35,7 @@ def login(request):
 
 @transaction.atomic
 def register(request):
-    user_more = User_More.objects.get(user = request.user)
-    context = {'login_user': user_more}
+    context = {}
     if request.method == 'GET':
         return render(request, 'event/register.html', context)
     if len(User.objects.filter(username=request.POST['email'])) > 0:
@@ -44,9 +44,10 @@ def register(request):
     if request.POST['password1'] != request.POST['password2']:
         context['error'] = "Passwords don't match"
         return render(request, 'event/register.html', context)
-    csock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    csock.connect(('8.8.8.8', 80))
-    (myaddr, myport) = csock.getsockname()
+    #csock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    #csock.connect(('8.8.8.8', 80))
+    #(myaddr, myport) = csock.getsockname()
+    myaddr = public_ip()
     try:
         random_str = gen_activate_key(20)
         subject = 'Blog registration confirmation'
@@ -54,7 +55,7 @@ def register(request):
                   % {'url': 'http://' + myaddr + ':8000/event/activate',
                      'username': request.POST['email'],
                      'random_str': random_str}
-        sender = 'kuokuo001@gmail.com'
+        sender = '4129802587lk@gmail.com'
         receiver = [request.POST['email']]
         send_mail(subject, message, sender, receiver, )
     except:
@@ -112,9 +113,6 @@ def gen_activate_key(length):
     return ''.join([random.choice(chars) for i in range(length)])
 
 def confirmation(request):
-    if request.user:
-        user_more = User_More.objects.get(user = request.user)
-    context = {'login_user': user_more}
-    return render(request, 'event/small_pages/confirmation.html', context)
+    return render(request, 'event/small_pages/confirmation.html')
 
 

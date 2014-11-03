@@ -41,7 +41,8 @@ def my_friends(request):
         for pair in pairs:
             if not pair.user_more in friends:
                 friends[pair.user_more] = 0
-    friends.pop(usermore)
+    if usermore in friends:
+        friends.pop(usermore)
     context['friends'] = friends
     return render(request, 'event/my_friends.html', context)
 
@@ -68,10 +69,12 @@ def new_event(request):
     e_name = request.POST['name']
     e_tag = request.POST['tag']
     e_description = request.POST['description']
-    guest_list = request.POST['guests']
+    guest_list = request.REQUEST.getlist('guests')
     e_pic = request.FILES['picture']
     event = Event(name=e_name, tag=e_tag, description=e_description, pic=e_pic)
     event.save()
+    print 'guest_list',guest_list
+    print 'here'
     for i in guest_list:
         e_user_more = User_More.objects.get(id=i)
         pair = UserMore_Event(user_more=e_user_more, event=event)

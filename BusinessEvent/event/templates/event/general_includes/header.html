@@ -34,6 +34,9 @@
                                         <li><a href="/all_user"><span>AllUser</span></a></li>
                                     {% endifnotequal %}
                                 {% endif %}
+                                {% if user.is_anonymous %}
+                                    <li><a href="/event/register"><span>Register</span></a></li>
+                                {% endif %}
                                 <li><a href="/contact"><span>Contact</span></a></li>
                                 {% if not user.is_anonymous %}
                                     <li><a href="/event/logout"><span>Logout</span></a></li>
