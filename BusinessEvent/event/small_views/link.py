@@ -12,8 +12,12 @@ from django.contrib.auth.decorators import login_required
 import django
 
 def news_page(request, news_id):
-    usermore = User_More.objects.get(user=request.user)
-    context = {'login_user': usermore}
+    context = {}
+    try:
+        usermore = User_More.objects.get(user=request.user)
+        context['login_user'] = usermore
+    except:
+        pass
     news = News.objects.get(id=news_id)
     context['news'] = news
     return render(request, 'event/news_page.html', context)
