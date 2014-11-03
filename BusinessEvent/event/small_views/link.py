@@ -46,3 +46,13 @@ def publish_news(request):
     if usermore.role != 2:
         return redirect('/news')
     return render(request, 'event/small_pages/publish_news.html', context)
+
+@login_required()
+def publish_event(request):
+    usermore = User_More.objects.get(user=request.user)
+    context = {'login_user': usermore}
+    if usermore.role != 4:
+        return redirect('/news')
+    all_users = User_More.objects.all()
+    context['all_users'] = all_users
+    return render(request, 'event/small_pages/publish_event.html', context)

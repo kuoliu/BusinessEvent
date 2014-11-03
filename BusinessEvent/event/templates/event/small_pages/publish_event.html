@@ -1,0 +1,75 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Publish Event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include "event/general_includes/include_css.html" %}
+    {% include "event/general_includes/include_js.html" %}
+</head>
+<body>
+<!---start-wrap---->
+{% include "event/general_includes/header.html" %}
+<!---start-content---->
+<div class="content">
+    <div class="wrap">
+        <div class="contact-info">
+            <div class="contact-grids">
+                <h1>Publish Event</h1>
+
+                <div class="clear"></div>
+            </div>
+            <form method="post" enctype="multipart/form-data" action="/new_event/publish_event">
+                {% if error %}
+                    <div class="notification-box notification-box-error">
+                        <p><i class="icon-remove-sign"></i>{{ error }}</p>
+                        <a href="#" class="notification-close notification-close-error"><i
+                                class="icon-remove"></i></a>
+                    </div>
+                {% endif %}
+                <div class="contact-form">
+                    <div class="contact-to">
+                        <input type="text" class="text" name="name" placeholder="Title">
+                    </div>
+                    <div class="clear"></div>
+                    <div class="contact-to">
+                        <input type="text" class="text" name="tag" placeholder="Tag">
+                    </div>
+                    <div class="clear"></div>
+                    <span class="btn btn-file"><input type="file" name="picture"></span>
+
+                    <div class="clear"></div>
+                    <div class="text2">
+                        <textarea name="description" placeholder="Description"></textarea>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="contact-to">
+                        {% for one_user in all_users %}
+                            <input type="checkbox" name="guests" value="{{ one_user.id }}">
+                            <span class="mail">{{ one_user.user.get_full_name }} </span>
+                            <img src="/static/event/images/email.png" alt="">
+                            <span class="mail"><a href="mailto:{{ one_user.user.email }}">{{ one_user.user.email }}</a></span>
+                            <br>
+                        {% endfor %}
+                    </div>
+                    <br>
+
+                    <div class="clear"></div>
+                    <span><input type="submit" class="" value="Submit"></span>
+
+                    <div class="clear"></div>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+</div>
+{% include "event/general_includes/footer.html" %}
+<!---//End-wrap---->
+</body>
+</html>

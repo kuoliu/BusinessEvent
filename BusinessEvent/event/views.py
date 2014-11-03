@@ -56,10 +56,33 @@ def publish(request):
     news.save()
     return redirect('/news')
 
+@transaction.atomic
+@login_required()
+def new_event(request):
+    user_more = User_More.objects.get(user=request.user)
+    context = {'login_user': user_more}
+    if user_more.role != 4:
+        return redirect('/news')
+    if request.method == 'GET':
+        return redirect('new_event/')
+    e_name = request.POST['name']
+    e_tag = request.POST['tag']
+    e_description = request.POST['description']
+    guest_list = request.POST['guests']
+    e_pic = request.FILES['picture']
+    event = Event(name=e_name, tag=e_tag, description=e_description, pic=e_pic)
+    event.save()
+    for i in guest_list:
+        e_user_more = User_More.objects.get(id=i)
+        pair = UserMore_Event(user_more=e_user_more, event=event)
+        pair.save()
+    return redirect('/all_events')
+
+
 @login_required()
 def all_user(request):
     user_more = User_More.objects.get(user=request.user)
-    if(user_more.role != 3):
+    if user_more.role != 3 and user_more.role != 4:
         return redirect('/news')
     context = {'login_user': user_more}
     all_users = User_More.objects.all()
@@ -69,7 +92,7 @@ def all_user(request):
 @login_required()
 def all_event(request):
     user_more = User_More.objects.get(user=request.user)
-    if(user_more.role != 3):
+    if user_more.role != 3 and user_more.role != 4:
         return redirect('/news')
     context = {'login_user': user_more}
     all_event = Event.objects.all()

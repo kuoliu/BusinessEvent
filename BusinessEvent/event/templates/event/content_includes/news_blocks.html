@@ -1,5 +1,6 @@
 {% for news in newss %}
     <li onclick="location.href='/event/news/{{ news.id }}';">
+
         <img src="/image/news/{{ news.id }}" width="200">
 
         <div class="post-info">
@@ -9,12 +10,6 @@
 
                 <p>{{ news.abstract }}</p>
 
-            </div>
-            <div class="post-info-rate-share">
-                <div class="post-share">
-                    <span style="background: url('/image/user/{{ news.media.id }}') 43px 43px;"> </span>
-                </div>
-                <div class="clear"></div>
             </div>
         </div>
     </li>

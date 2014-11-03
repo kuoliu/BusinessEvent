@@ -17,10 +17,18 @@
                                 {% ifequal login_user.role 2 %}
                                     <li><a href="/publish"><span>Publish</span></a></li>
                                 {% endifequal %}
+                                {% ifequal login_user.role 4 %}
+                                    <li><a href="/new_event"><span>NewEvent</span></a></li>
+                                {% endifequal %}
                                 {% if not user.is_anonymous %}
                                     {% ifnotequal login_user.role 3 %}
-                                        <li><a href="/my_events"><span>MyEvents</span></a></li>
-                                        <li><a href="/my_friends"><span>MyFriends</span></a></li>
+                                        {% ifnotequal login_user.role 4 %}
+                                            <li><a href="/my_events"><span>MyEvents</span></a></li>
+                                            <li><a href="/my_friends"><span>MyFriends</span></a></li>
+                                        {% else %}
+                                            <li><a href="/all_events"><span>AllEvents</span></a></li>
+                                            <li><a href="/all_user"><span>AllUser</span></a></li>
+                                        {% endifnotequal %}
                                     {% else %}
                                         <li><a href="/all_events"><span>AllEvents</span></a></li>
                                         <li><a href="/all_user"><span>AllUser</span></a></li>

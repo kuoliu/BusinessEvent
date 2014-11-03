@@ -20,6 +20,8 @@ urlpatterns = patterns('',
 
     url(r'^publish/$', 'event.small_views.link.publish_news'),
     url(r'^publish/publish_news$', 'event.views.publish'),
+    url(r'^new_event/$', 'event.small_views.link.publish_event'),
+    url(r'^new_event/publish_event$', 'event.views.new_event'),
     url(r'^contact/', 'event.views.contact'),
     url(r'^all_user/$', 'event.views.all_user'),
     url(r'^all_events/$', 'event.views.all_event'),
