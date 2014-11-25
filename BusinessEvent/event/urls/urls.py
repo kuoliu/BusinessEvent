@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^activate/(?P<user_email>.+)/(?P<random_id>.+)$', 'event.small_views.user.activate'),
     url(r'^confirmation/$', 'event.small_views.user.confirmation'),
     url(r'^modify_info/$', 'event.small_views.user.modify_info'),
+    url(r'^search/$', 'event.small_views.user.search'),
 
     url(r'^news/(?P<news_id>.+)$', 'event.small_views.link.news_page'),
     url(r'^event/(?P<event_id>.+)$', 'event.small_views.link.event_page'),

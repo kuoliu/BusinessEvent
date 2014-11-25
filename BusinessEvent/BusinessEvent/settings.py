@@ -26,6 +26,7 @@ TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'event/templates'),
+    os.path.join(BASE_DIR, 'event_mobile/templates'),
 )
 
 ALLOWED_HOSTS = []

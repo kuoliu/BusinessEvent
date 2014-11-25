@@ -35,6 +35,7 @@
                                     {% endifnotequal %}
                                 {% endif %}
                                 {% if user.is_anonymous %}
+                                    <li><a href="/event/login"><span>LoginIn</span></a></li>
                                     <li><a href="/event/register"><span>Register</span></a></li>
                                 {% endif %}
                                 <li><a href="/contact"><span>Contact</span></a></li>
@@ -50,8 +51,10 @@
             </div>
         </div>
         <div class="top-searchbar">
-            <form>
-                <input type="text"/><input type="submit" value=""/>
+            <form method="post" action="/event/search/">
+                <input type="text" name="searchtxt"/>
+                <input type="submit" value=""/>
+                {% csrf_token %}
             </form>
         </div>
         <div class="userinfo">

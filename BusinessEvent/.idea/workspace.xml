@@ -25,73 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="news_blocks.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event/templates/event/content_includes/news_blocks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="8" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event/templates/event/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="70" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event/small_views/link.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="12" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1005">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/event/templates/event/general_includes/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="63" selection-start="922" selection-end="922" vertical-scroll-proportion="0.18237083" vertical-offset="225" max-vertical-offset="1305">
+            <state line="56" column="16" selection-start="3203" selection-end="3219" vertical-scroll-proportion="-8.666667" vertical-offset="632" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event/small_views/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="4" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1860">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="48" selection-start="2725" selection-end="2725" vertical-scroll-proportion="0.0" vertical-offset="905" max-vertical-offset="1620">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event/small_views/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="16" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/event/urls/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="14" column="55" selection-start="604" selection-end="655" vertical-scroll-proportion="0.5104712" vertical-offset="0" max-vertical-offset="382">
               <folding />
             </state>
           </provider>
@@ -107,22 +53,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/event/templates/event/small_pages/publish_news.html" />
-        <option value="$PROJECT_DIR$/event/models.py" />
-        <option value="$PROJECT_DIR$/BusinessEvent/urls.py" />
-        <option value="$PROJECT_DIR$/event/templates/event/small_pages/publish_event.html" />
-        <option value="$PROJECT_DIR$/event/static/event/css/style.css" />
-        <option value="$PROJECT_DIR$/event/templates/event/content_includes/news_blocks.html" />
-        <option value="$PROJECT_DIR$/event/templates/event/general_includes/footer.html" />
-        <option value="$PROJECT_DIR$/event/templates/event/contact.html" />
-        <option value="$PROJECT_DIR$/BusinessEvent/settings.py" />
-        <option value="$PROJECT_DIR$/event/admin.py" />
-        <option value="$PROJECT_DIR$/event/urls/utils.py" />
-        <option value="$PROJECT_DIR$/event/small_views/utils.py" />
-        <option value="$PROJECT_DIR$/event/small_views/user.py" />
         <option value="$PROJECT_DIR$/event/views.py" />
         <option value="$PROJECT_DIR$/event/small_views/link.py" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event/index.html" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event/general_includes/include_css.html" />
+        <option value="$PROJECT_DIR$/BusinessEvent/settings.py" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event_mobile/general_includes/include_css.html" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event_mobile/general_includes/include_js.html" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event_mobile/general_includes/header.html" />
+        <option value="$PROJECT_DIR$/event_mobile/urls_mobile.py" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event_mobile/content_includes/news_blocks.html" />
+        <option value="$PROJECT_DIR$/event_mobile/templates/event_mobile/index.html" />
+        <option value="$PROJECT_DIR$/event_mobile/views.py" />
+        <option value="$PROJECT_DIR$/BusinessEvent/urls.py" />
+        <option value="$PROJECT_DIR$/event/urls/urls.py" />
         <option value="$PROJECT_DIR$/event/templates/event/general_includes/header.html" />
+        <option value="$PROJECT_DIR$/event/small_views/user.py" />
       </list>
     </option>
   </component>
@@ -204,11 +150,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
+              <option name="myItemId" value="urls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,90 +173,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="general_includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="small_views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessEvent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,18 +195,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/event/templates/event/small_pages" />
-      <recent name="$PROJECT_DIR$/event/templates/event" />
-      <recent name="$PROJECT_DIR$/event/static/event/images" />
-      <recent name="$PROJECT_DIR$/BusinessEvent/media/images" />
-      <recent name="$PROJECT_DIR$/event/static/event/css" />
+      <recent name="$PROJECT_DIR$/event_mobile/static/css" />
+      <recent name="$PROJECT_DIR$/event_mobile" />
+      <recent name="$PROJECT_DIR$/event_mobile/static" />
+      <recent name="$PROJECT_DIR$/event" />
+      <recent name="$PROJECT_DIR$/BusinessEvent" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/event_mobile/static/event_mobile" />
+      <recent name="$PROJECT_DIR$/event_mobile/templates/event_mobile" />
       <recent name="$PROJECT_DIR$/event/small_views" />
       <recent name="$PROJECT_DIR$/event/templates/event/small_pages" />
       <recent name="$PROJECT_DIR$/event/templates/event/content_includes" />
-      <recent name="$PROJECT_DIR$/event/static/event/js" />
-      <recent name="$PROJECT_DIR$/event/templates/event" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.BusinessEvent">
@@ -581,25 +439,45 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.6335404" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.6362229" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36645964" sideWeight="0.50038433" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36645964" sideWeight="0.49961567" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3637771" sideWeight="0.49961567" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -624,102 +502,120 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/event/urls/urls.py">
+    <entry file="file://$PROJECT_DIR$/event/templates/event/general_includes/include_css.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="358">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event/static/event/js/jquery.min.js">
+    <entry file="file://$PROJECT_DIR$/BusinessEvent/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="140" selection-end="140" vertical-scroll-proportion="0.030303031" vertical-offset="35" max-vertical-offset="33345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/static/event/js/jquery.wookmark.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="680" selection-end="680" vertical-scroll-proportion="0.1574344" vertical-offset="306" max-vertical-offset="7575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/templates/event/general_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="74" selection-end="74" vertical-scroll-proportion="0.084745765" vertical-offset="0" max-vertical-offset="354" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/small_views/photo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0026455026" vertical-offset="1" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/templates/event/content_includes/news_blocks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="315">
-          <folding />
+        <state line="11" column="40" selection-start="342" selection-end="342" vertical-scroll-proportion="0.43193716" vertical-offset="0" max-vertical-offset="382">
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BusinessEvent/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="41" selection-start="2707" selection-end="2729" vertical-scroll-proportion="0.64285713" vertical-offset="1317" max-vertical-offset="1695">
+        <state line="28" column="40" selection-start="932" selection-end="932" vertical-scroll-proportion="1.0994765" vertical-offset="0" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/general_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="382">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="86" selection-start="807" selection-end="831" vertical-scroll-proportion="0.16201118" vertical-offset="332" max-vertical-offset="1095">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/event/small_views/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6099476" vertical-offset="233" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/my_events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="71" selection-start="1410" selection-end="1410" vertical-scroll-proportion="-0.67597765" vertical-offset="872" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/my_friends.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="72" selection-start="1414" selection-end="1415" vertical-scroll-proportion="0.33333334" vertical-offset="522" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/personal_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="6" selection-start="471" selection-end="472" vertical-scroll-proportion="0.33333334" vertical-offset="132" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="1823" selection-end="1839" vertical-scroll-proportion="0.5865922" vertical-offset="495" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/event/small_views/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="4" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1860">
+        <state line="132" column="0" selection-start="4756" selection-end="5243" vertical-scroll-proportion="0.921466" vertical-offset="1478" max-vertical-offset="1920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/urls_pc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="510">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/templates/event/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="23" selection-start="779" selection-end="779" vertical-scroll-proportion="0.9162011" vertical-offset="107" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/event/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="48" selection-start="2725" selection-end="2725" vertical-scroll-proportion="0.0" vertical-offset="905" max-vertical-offset="1620">
-          <folding />
+        <state line="94" column="17" selection-start="3488" selection-end="3488" vertical-scroll-proportion="3.8211381" vertical-offset="0" max-vertical-offset="1620">
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event/static/event/css/style.css">
+    <entry file="file://$PROJECT_DIR$/event/templates/event/general_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="18030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/templates/event/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="70" selection-start="3224" selection-end="3224" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/small_views/link.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+        <state line="56" column="16" selection-start="3203" selection-end="3219" vertical-scroll-proportion="-8.666667" vertical-offset="632" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/event/urls/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/templates/event/general_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="63" selection-start="922" selection-end="922" vertical-scroll-proportion="0.18237083" vertical-offset="225" max-vertical-offset="1305">
+        <state line="14" column="55" selection-start="604" selection-end="655" vertical-scroll-proportion="0.5104712" vertical-offset="0" max-vertical-offset="382">
           <folding />
         </state>
       </provider>

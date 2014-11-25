@@ -115,4 +115,18 @@ def gen_activate_key(length):
 def confirmation(request):
     return render(request, 'event/small_pages/confirmation.html')
 
+def search(request):
+    all_event = Event.objects.all()
+    search_txt = request.POST['searchtxt'].lower()
+    events = []
+    for e in all_event:
+        if e.description.lower().find(search_txt) >= 0:
+            events.append(e)
+    context = {}
+    if not request.user.is_anonymous():
+        user_more = User_More.objects.get(user=request.user)
+        context['login_user'] = user_more
+    context['events'] = events
+    return render(request, 'event/my_events.html', context)
+
 
