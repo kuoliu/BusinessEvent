@@ -62,16 +62,24 @@ def register(request):
         context['error'] = 'Invalid Email Address'
         return render(request, 'event/small_pages/error.html', context)
         # Creates the new user from the valid form data
-    new_user = User.objects.create_user(username=request.POST['email'], \
+    try:
+        new_user = User.objects.create_user(username=request.POST['email'], \
                                         first_name=request.POST['firstname'], \
                                         last_name=request.POST['lastname'], \
                                         email=request.POST['email'], \
                                         password=request.POST['password1'], )
+    except:
+        context['error'] = 'Information not enough, please complete the form'
+        return render(request, 'event/small_pages/error.html', context)
     new_user.is_active = False
     new_user.save()
     new_user_random = User_Random(user=new_user, random=random_str)
     new_user_random.save()
-    new_user_more = User_More(user=new_user, description=request.POST['description'], pic=request.FILES['picture'], role=1)
+    try:
+        new_user_more = User_More(user=new_user, description=request.POST['description'], pic=request.FILES['picture'], role=1)
+    except:
+        context['error'] = 'Information not enough, please complete the form'
+        return render(request, 'event/small_pages/error.html', context)
     new_user_more.save()
     return redirect('/event/confirmation')
 
