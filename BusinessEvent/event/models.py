@@ -21,6 +21,8 @@ class Event(models.Model):
     tag = models.CharField(max_length=64)
     description = models.TextField()
     pic = models.ImageField(upload_to="event_images", blank=True)
+    datetime = models.DateTimeField()
+    place = models.CharField(max_length=64)
 
     def __unicode__(self):
         return self.name

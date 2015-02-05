@@ -117,7 +117,10 @@ def confirmation(request):
 
 def search(request):
     all_event = Event.objects.all()
-    search_txt = request.POST['searchtxt'].lower()
+    try:
+        search_txt = request.POST['searchtxt'].lower()
+    except:
+        search_txt = ""
     events = []
     for e in all_event:
         if e.description.lower().find(search_txt) >= 0:

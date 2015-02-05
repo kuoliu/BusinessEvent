@@ -7,7 +7,7 @@ from django.db import transaction
 from datetime import datetime
 
 def home(request):
-    newss = News.objects.all()
+    newss = News.objects.all().order_by("-datetime")
     context = {'newss':newss}
     if not request.user.is_anonymous():
         user_more = User_More.objects.get(user=request.user)
@@ -69,10 +69,11 @@ def new_event(request):
         return redirect('new_event/')
     e_name = request.POST['name']
     e_tag = request.POST['tag']
+    e_place = request.POST['place']
     e_description = request.POST['description']
     guest_list = request.REQUEST.getlist('guests')
     e_pic = request.FILES['picture']
-    event = Event(name=e_name, tag=e_tag, description=e_description, pic=e_pic)
+    event = Event(name=e_name, tag=e_tag, description=e_description, pic=e_pic, datetime=datetime.now(), place = e_place)
     event.save()
     print 'guest_list',guest_list
     print 'here'
@@ -99,6 +100,6 @@ def all_event(request):
     if user_more.role != 3 and user_more.role != 4:
         return redirect('/news')
     context = {'login_user': user_more}
-    all_event = Event.objects.all()
+    all_event = Event.objects.all().order_by('-datetime')
     context['events'] = all_event
     return render(request, 'event/my_events.html', context)

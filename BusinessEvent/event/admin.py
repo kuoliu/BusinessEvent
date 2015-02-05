@@ -9,7 +9,10 @@ class User_MoreAdmin(admin.ModelAdmin):
     list_display = ('user', 'description', 'pic', 'role')
 
 class Event_Admin(admin.ModelAdmin):
-    list_display = ('name', 'tag', 'description', 'pic')
+    list_display = ('datetime', 'name', 'tag', 'description', 'pic', 'place')
+    date_hierarchy = 'datetime'
+    list_filter = ('datetime',)
+    ordering = ('-datetime',)
 
 class News_Admin(admin.ModelAdmin):
     list_display = ('datetime', 'event', 'media', 'tag', 'abstract', 'content', 'pic', 'check')
