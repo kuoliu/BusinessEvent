@@ -72,8 +72,15 @@ def new_event(request):
     e_place = request.POST['place']
     e_description = request.POST['description']
     guest_list = request.REQUEST.getlist('guests')
-    e_pic = request.FILES['picture']
-    event = Event(name=e_name, tag=e_tag, description=e_description, pic=e_pic, datetime=datetime.now(), place = e_place)
+    try:
+        e_pic = request.FILES['picture']
+    except:
+        pass
+    try:
+        event = Event(name=e_name, tag=e_tag, description=e_description, pic=e_pic, datetime=datetime.now(), place = e_place)
+    except:
+        context['error'] = 'Please make sure you provide enough information for this event, exp. Picture'
+        return render(request, 'event/small_pages/error.html', context)
     event.save()
     print 'guest_list',guest_list
     print 'here'

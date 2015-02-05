@@ -40,10 +40,10 @@ def register(request):
         return render(request, 'event/register.html', context)
     if len(User.objects.filter(username=request.POST['email'])) > 0:
         context['error'] = 'User Already Exist'
-        return render(request, 'event/register.html', context)
+        return render(request, 'event/small_pages/error.html', context)
     if request.POST['password1'] != request.POST['password2']:
         context['error'] = "Passwords don't match"
-        return render(request, 'event/register.html', context)
+        return render(request, 'event/small_pages/error.html', context)
     #csock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     #csock.connect(('8.8.8.8', 80))
     #(myaddr, myport) = csock.getsockname()
@@ -60,7 +60,7 @@ def register(request):
         send_mail(subject, message, sender, receiver, )
     except:
         context['error'] = 'Invalid Email Address'
-        return render(request, 'event/register.html', context)
+        return render(request, 'event/small_pages/error.html', context)
         # Creates the new user from the valid form data
     new_user = User.objects.create_user(username=request.POST['email'], \
                                         first_name=request.POST['firstname'], \
@@ -90,7 +90,12 @@ def modify_info(request):
     user_more.user.password = request.POST['password1']
     user_more.user.email = request.POST['email']
     user_more.user.username = request.POST['email']
-    user_more.pic = request.FILES['picture']
+    try:
+        t = request.FILES['picture']
+    except:
+        pass
+    else:
+        user_more.pic = request.FILES['picture']
     user_more.description = request.POST['description']
     user_more.user.save()
     user_more.save()
