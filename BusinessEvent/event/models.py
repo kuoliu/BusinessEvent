@@ -34,6 +34,7 @@ class News(models.Model):
     content = models.TextField()
     pic = models.ImageField(upload_to="news_images", blank=True)
     check = models.BooleanField()
+    datetime = models.DateTimeField()
 
     def __unicode(self):
         return self.abstract

@@ -12,7 +12,7 @@ class Event_Admin(admin.ModelAdmin):
     list_display = ('name', 'tag', 'description', 'pic')
 
 class News_Admin(admin.ModelAdmin):
-    list_display = ('event', 'media', 'tag', 'abstract', 'content', 'pic', 'check')
+    list_display = ('datetime', 'event', 'media', 'tag', 'abstract', 'content', 'pic', 'check')
 
 class UserMore_Event_Admin(admin.ModelAdmin):
     list_display = ('user_more', 'event')

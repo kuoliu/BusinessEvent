@@ -4,6 +4,7 @@ from models import *
 from mimetypes import guess_type
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
+from datetime import datetime
 
 def home(request):
     newss = News.objects.all()
@@ -53,7 +54,7 @@ def publish(request):
     context = {'login_user': user_more}
     if request.method == 'GET':
         return render(request, 'event/register.html', context)
-    news = News(title=request.POST['title'], tag=request.POST['tag'], abstract=request.POST['abstract'], content=request.POST['content'], pic=request.FILES['picture'], media=request.user, check=True)
+    news = News(title=request.POST['title'], tag=request.POST['tag'], abstract=request.POST['abstract'], content=request.POST['content'], pic=request.FILES['picture'], media=request.user, check=True, datetime=datetime.now())
     news.save()
     return redirect('/news')
 
