@@ -1,6 +1,6 @@
 {% for friend in friends %}
     <li>
-        <img src="/image/user/{{ friend.user.id }}" width="200" onclick="location.href='/user/{{ friend.user.id }}';">
+        <img src="/image/user/{{ friend.user.id }}" width="200" title="{{ friend.description }}" onclick="location.href='/user/{{ friend.user.id }}';">
 
         <div class="post-info">
             <div class="post-basic-info">

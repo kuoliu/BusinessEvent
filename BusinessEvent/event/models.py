@@ -8,6 +8,7 @@ class User_More(models.Model):
     description = models.TextField()
     pic = models.ImageField(upload_to="user_images", blank=True)
     role = models.IntegerField()
+    classification = models.CharField(max_length=64)
 
     def __unicode__(self):
         return unicode(self.user)

@@ -98,6 +98,7 @@ def modify_info(request):
     user_more.user.password = request.POST['password1']
     user_more.user.email = request.POST['email']
     user_more.user.username = request.POST['email']
+    user_more.classification = request.POST['classification']
     try:
         t = request.FILES['picture']
     except:

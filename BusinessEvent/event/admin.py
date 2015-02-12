@@ -6,7 +6,7 @@ class User_RandomAdmin(admin.ModelAdmin):
     list_display = ('user', 'random')
 
 class User_MoreAdmin(admin.ModelAdmin):
-    list_display = ('user', 'description', 'pic', 'role')
+    list_display = ('user', 'description', 'pic', 'role', 'classification')
 
 class Event_Admin(admin.ModelAdmin):
     list_display = ('datetime', 'name', 'tag', 'description', 'pic', 'place')

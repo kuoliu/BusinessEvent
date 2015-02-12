@@ -1,7 +1,7 @@
 {% for news in newss %}
     <li onclick="location.href='/event/news/{{ news.id }}';">
 
-        <img src="/image/news/{{ news.id }}" width="200">
+        <img src="/image/news/{{ news.id }}" width="200" title="{{ news.abstract }}">
 
         <div class="post-info">
             <div class="post-basic-info">
@@ -10,7 +10,6 @@
 
                 <p>
                 {{ news.datetime }}<br>
-                {{ news.abstract }}
                 </p>
 
             </div>

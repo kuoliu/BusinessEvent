@@ -47,11 +47,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <input type="password" class="text" name="password2" value="{{ login_user.user.password }}">
                     </div>
                     <div class="clear"></div>
+                    <select name="classification">
+                        <option value="n_a" {% ifequal login_user.classification "n_a" %}selected{% endifequal %}>Please select your role</option>
+                        <option value="art_gallery" {% ifequal login_user.classification "art_gallery" %}selected{% endifequal %}>Art Gallery</option>
+                        <option value="institute" {% ifequal login_user.classification "institute" %}selected{% endifequal %}>Institute</option>
+                        <option value="art_dealer" {% ifequal login_user.classification "art_dealer" %}selected{% endifequal %}>Art Dealer</option>
+                        <option value="art_lover" {% ifequal login_user.classification "art_lover" %}selected{% endifequal %}>Art Lover</option>
+                        <option value="others" {% ifequal login_user.classification "others" %}selected{% endifequal %}>Others</option>
+                    </select>
+                    <div class="clear"></div>
                     <span class="btn btn-file"><input type="file" name="picture" value="{{ login_user.pic }}"></span>
 
                     <div class="clear"></div>
+
                     <div class="text2">
-                        <textarea name="description" placeholder="{{ login_user.description }}" ></textarea>
+                        <textarea name="description" placeholder="Describe yourself here">{{ login_user.description }}</textarea>
                     </div>
                     <span><input type="submit" class="" value="Submit"></span>
 
